@@ -1,0 +1,10 @@
+*.log
+.idea
+out/
+dev.env
+target/
+logs
+.DS_Store
+docker-compose-ignored.yml
+gitignored/
+test-report/

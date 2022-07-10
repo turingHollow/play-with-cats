@@ -31,6 +31,7 @@ object PlayAlternative {
   }
 
   def parseInt(s: String): Either[Throwable, Int] = Either.catchNonFatal(s.toInt)
+
   def parseIntFirstChar(s: String): Either[Throwable, Int] = Either.catchNonFatal(2 * Character.digit(s.charAt(0), 10))
 
   // Try first parsing the whole, then just the first character.

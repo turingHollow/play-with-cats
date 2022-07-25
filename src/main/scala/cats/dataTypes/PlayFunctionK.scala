@@ -2,6 +2,7 @@ package cats.dataTypes
 
 import cats.arrow.FunctionK
 import cats.~>
+import cats.implicits._
 
 object PlayFunctionK {
 

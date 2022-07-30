@@ -11,9 +11,6 @@ object PlayLocal {
   def calculateModifiedContentLength[F[_] : Applicative](implicit F: Local[F, String]): F[Int] =
     F.local(calculateContentLength[F])("Prefix " + _)
 
-  val result = calculateModifiedContentLength[Reader[String, *]].run("Hello")
-
-
   def both[F[_] : Monad](implicit F: Local[F, String]): F[(Int, Int)] = for {
     length <- calculateContentLength[F]
     modifiedLength <- calculateModifiedContentLength[F]
